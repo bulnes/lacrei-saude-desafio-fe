@@ -26,6 +26,11 @@ export const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  html, body, button, input, select, textarea {
+    font-family: var(--font-nunito), sans-serif;
+    font-size: 1rem;
+  }
+
   body {
     /* 4. Add accessible line-height */
     line-height: 1.5;
@@ -43,15 +48,7 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 100%;
   }
 
-  /* 7. Inherit fonts for form controls */
-  input,
-  button,
-  textarea,
-  select {
-    font: inherit;
-  }
-
-  /* 8. Avoid text overflows */
+  /* 7. Avoid text overflows */
   p,
   h1,
   h2,
@@ -62,7 +59,7 @@ export const GlobalStyles = createGlobalStyle`
     overflow-wrap: break-word;
   }
 
-  /* 9. Improve line wrapping */
+  /* 8. Improve line wrapping */
   p {
     text-wrap: pretty;
   }
@@ -76,7 +73,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   /*
-    10. Create a root stacking context
+    9. Create a root stacking context
   */
   #root,
   #__next {

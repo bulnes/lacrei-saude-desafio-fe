@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import StyledComponentsRegistry from "@/lib/registry";
 import { Nunito } from "next/font/google";
 import { GlobalStyles } from "./global.styles";
@@ -19,6 +20,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <GlobalStyles />
           {children}
+          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>

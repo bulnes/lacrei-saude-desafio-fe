@@ -1,10 +1,10 @@
+import { Help } from "@/components/help";
 import { Quality } from "@/components/quality";
-import { Who } from "@/components/who";
 
-export default function WhoWeArePage() {
+export default function HelpPage() {
   return (
     <>
-      <Who />
+      <Help />
       <Quality />
     </>
   );

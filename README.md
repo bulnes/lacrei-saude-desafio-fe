@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lacrei Saúde - Desafio Front-end
 
-## Getting Started
+Este projeto é uma plataforma de saúde inclusiva desenvolvida com Next.js, TypeScript e Styled Components. O foco principal é oferecer uma interface acessível e performática para a comunidade LGBTQIAPN+.
 
-First, run the development server:
+## 🚀 Setup e Execução
+
+### Pré-requisitos
+
+- Node.js (v18 ou superior)
+- NPM ou Yarn
+
+### Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/bulnes/lacrei-saude-desafio-fe.git
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+## Desenvolvimento
+
+O projeto utiliza **concurrently** para rodar simultaneamente o Next.js e o JSON Server (Fake API):
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Website: [http://localhost:3000](http://localhost:3000)
+- Fake API: [http://localhost:3001](http://localhost:3001)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Justificativas Técnicas
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Next.js (App Router)**: Escolhido pela eficiência no roteamento e otimização nativa de performance (como o componente Image e Link).
 
-## Learn More
+**Styled Components**: Utilizado para garantir estilos escopados, suporte a temas e evitar conflitos de CSS em componentes reutilizáveis.
 
-To learn more about Next.js, take a look at the following resources:
+**TypeScript**: Implementado para garantir segurança de tipos, reduzindo erros em tempo de execução e melhorando o IntelliSense durante o desenvolvimento.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**JSON Server**: Adotado para simular um ambiente de API real, permitindo o desenvolvimento de fluxos assíncronos (loading/error) de forma fidedigna.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Jest & React Testing Library**: A suíte de testes foca na experiência do usuário (acessibilidade), garantindo que os componentes sejam funcionais e acessíveis por leitores de tela (usando roles e ARIA labels).
 
-## Deploy on Vercel
+## 🏗 Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+O deploy da aplicação foi configurado para a Vercel.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O build é gerado através do comando:
+
+```bash
+npm run build
+```
+
+A versão estática e otimizada é servida via:
+
+```bash
+npm start
+```
+
+Nota: Para o funcionamento da Fake API em produção, os dados do db.json devem ser migrados para uma API real.
+
+## 🔄 Estratégia de Rollback
+
+Caso uma nova versão apresente falhas críticas em produção, os seguintes passos devem ser seguidos:
+
+1. Via Vercel (Interface)
+
+- Acesse o dashboard do projeto na Vercel.
+- Vá em Deployments.
+- Localize a última versão estável (conhecida como Green Deployment).
+- Clique nos três pontos e selecione Promote to Production.
+
+2. Via Git (CLI)
+
+Caso precise reverter o código localmente e subir um hotfix:
+
+```bash
+# Identifica o commit estável
+git log --oneline
+
+# Reverte para o commit desejado
+git revert HEAD
+
+# Faz o push da reversão
+git push origin main
+```
+
+## 🧪 Testes e Cobertura
+
+Para garantir a qualidade e evitar regressões:
+
+- Executar testes: `npm run test`
+- Modo Watch: `npm run test:watch`
+- Relatório de Coverage: `npm run test:coverage`
+
+Os testes focam na experiência do usuário, verificando a acessibilidade e funcionalidade dos componentes.
+
+## 📦 Scripts Disponíveis
+
+- `dev`: Inicia o ambiente de desenvolvimento completo.
+- `build`: Prepara a aplicação para produção.
+- `lint`: Executa a verificação estática do código.
+- `test:coverage`: Gera relatório detalhado de testes.
+- `fake:api`: Inicia apenas o servidor mock na porta 3001.
+
+---
+
+Este README foi desenvolvido para demonstrar clareza técnica e transparência nos processos de engenharia. 🏳️‍🌈

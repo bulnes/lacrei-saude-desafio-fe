@@ -1,3 +1,4 @@
+import * as GS from "@/app/global.styles";
 import Image from "next/image";
 import Link from "next/link";
 import * as S from "./styles";
@@ -35,12 +36,15 @@ export function Footer() {
       <S.Divider />
 
       <S.Content>
-        <Image
-          src="/images/logo-v2.svg"
-          alt="Logo Lacrei Saúde"
-          width={170}
-          height={48}
-        />
+        <h2>
+          <Image
+            src="/images/logo-v2.svg"
+            alt="Logo Lacrei Saúde"
+            width={170}
+            height={48}
+          />
+          <GS.srOnly>Lacrei Saúde</GS.srOnly>
+        </h2>
 
         {content.map((section) => (
           <S.ContentSection key={section.title}>

@@ -1,6 +1,6 @@
 "use client";
 
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   /* 1. Use a more-intuitive box-sizing model */
@@ -79,4 +79,20 @@ export const GlobalStyles = createGlobalStyle`
   #__next {
     isolation: isolate;
   }
+
+  /* 10. Remove link underlines */
+  a {
+    text-decoration: none;
+  }
+`;
+
+export const srOnly = styled.span`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 `;

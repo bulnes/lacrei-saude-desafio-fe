@@ -1,3 +1,9 @@
+import { Jumbotron } from "@/components/jumbotron";
+
 export default function Home() {
-  return <main>Hello World</main>;
+  return (
+    <>
+      <Jumbotron />
+    </>
+  );
 }

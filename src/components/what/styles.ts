@@ -12,8 +12,12 @@ export const WhatContainer = styled.section`
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding: 0px 4rem;
+  padding: 0px 2rem;
   margin: auto auto 3rem;
+
+  @media (min-width: 768px) {
+    padding: 0px 4rem;
+  }
 
   img {
     display: none;
@@ -35,8 +39,12 @@ export const Card = styled.div`
   border-radius: 8px;
   padding: 1.45rem 1.925rem;
   background-color: rgb(255, 255, 255);
-  margin-left: -1.5rem;
-  width: 29.625rem;
+  width: 100%;
+  
+  @media (min-width: 768px) {
+    margin-left: -1.5rem;
+    width: 29.625rem;
+  }
 `;
 
 export const Title = styled.h2`

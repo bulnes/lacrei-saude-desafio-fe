@@ -53,6 +53,10 @@ export const Divider = styled.hr`
 export const Footnote = styled.div`
   font-size: 0.875rem;
 
+  & a {
+    text-decoration: underline;
+  }
+
   & > p:last-child {
     margin-top: 1rem;
   }

@@ -2,7 +2,7 @@
 
 Este projeto é uma plataforma de saúde inclusiva desenvolvida com Next.js, TypeScript e Styled Components. O foco principal é oferecer uma interface acessível e performática para a comunidade LGBTQIAPN+.
 
-## 🚀 Setup e Execução
+## Setup e Execução
 
 ### Pré-requisitos
 

@@ -27,7 +27,7 @@ export function What() {
           </S.Description>
         </S.Descriptions>
 
-        <Link href="/about">
+        <Link href="/quem-somos">
           <Button>Saiba mais</Button>
         </Link>
       </S.Card>

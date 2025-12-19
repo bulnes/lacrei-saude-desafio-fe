@@ -19,11 +19,11 @@ export function Header() {
       </h1>
 
       <S.NavContainer>
-        <Link href="#">
+        <Link href="/quem-somos">
           <S.NavLink type="button">Quem Somos</S.NavLink>
         </Link>
 
-        <Link href="#">
+        <Link href="/ajuda">
           <S.NavLink type="button">Ajuda</S.NavLink>
         </Link>
       </S.NavContainer>

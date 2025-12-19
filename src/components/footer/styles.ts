@@ -5,6 +5,11 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
   max-width: 74.75rem;
   margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const Content = styled.div`

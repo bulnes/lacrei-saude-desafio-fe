@@ -10,6 +10,11 @@ export const HelpContainer = styled.section`
   position: relative;
   max-width: 74.75rem;
   margin: 2rem auto 3rem;
+  padding: 0 2rem;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 
   & > div {
     display: flex;

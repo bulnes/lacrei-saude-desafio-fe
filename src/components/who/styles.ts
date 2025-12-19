@@ -4,12 +4,18 @@ import styled from 'styled-components';
 
 export const WhoContainer = styled.section`
   display: flex;
-  -webkit-box-pack: justify;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
   position: relative;
   max-width: 74.75rem;
   margin: 2rem auto 3rem;
+  padding: 0 2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding: 0;
+  }
 
   & > div {
     display: flex;
@@ -18,15 +24,23 @@ export const WhoContainer = styled.section`
   }
 
   & > img {
-    width: 30.7rem;
-    height: 30.7rem;
-    margin-top: 8rem;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin-top: 2rem;
     border-radius: 2rem;
+
+    @media (min-width: 768px) {
+      width: 30.7rem;
+      height: 30.7rem;
+      margin-top: 8rem;
+    }
   }
 `;
 
 export const Title = styled.h2`
-  width: 35.4rem;
+  width: 100%;
+  max-width: 35.4rem;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3rem;
@@ -47,5 +61,6 @@ export const Paragraph = styled.p`
   font-weight: 400;
   line-height: 2.25rem;
   color: rgb(45, 45, 45);
-  width: 34rem;
+  width: 100%;
+  max-width: 34rem;
 `;

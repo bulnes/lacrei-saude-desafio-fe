@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import styled from 'styled-components';
+import { ButtonStyle } from '../button/styles';
 
 export const WhatContainer = styled.section`
   max-width: 74.75rem;
@@ -66,4 +68,8 @@ export const Descriptions = styled.div`
 export const Description = styled.p`
   color: rgb(81, 81, 81);
   line-height: 1.5rem;
+`;
+
+export const CTA = styled(Link)`
+  ${ButtonStyle}
 `;

@@ -6,6 +6,10 @@ export const QualityContainer = styled.section`
   padding: 4rem 2rem;
   max-width: 74.75rem;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 4rem 0;
+  }
 `;
 
 export const Title = styled.h2`
@@ -37,7 +41,6 @@ export const Description = styled.p`
 `;
 
 export const CardsContainer = styled.div`
-  max-width: 69.75rem;
   gap: 1.5rem;
   display: flex;
   -webkit-box-pack: start;

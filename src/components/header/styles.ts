@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
@@ -26,7 +27,7 @@ export const NavContainer = styled.nav`
   gap: 1rem;
 `;
 
-export const NavLink = styled.button`
+export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;

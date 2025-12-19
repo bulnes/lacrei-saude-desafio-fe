@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "../button";
 import * as S from "./styles";
 
 export function What() {
@@ -27,9 +25,7 @@ export function What() {
           </S.Description>
         </S.Descriptions>
 
-        <Link href="/quem-somos">
-          <Button>Saiba mais</Button>
-        </Link>
+        <S.CTA href="/quem-somos">Saiba mais</S.CTA>
       </S.Card>
     </S.WhatContainer>
   );

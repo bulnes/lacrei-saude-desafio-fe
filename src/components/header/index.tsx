@@ -19,13 +19,8 @@ export function Header() {
       </h1>
 
       <S.NavContainer>
-        <Link href="/quem-somos">
-          <S.NavLink type="button">Quem Somos</S.NavLink>
-        </Link>
-
-        <Link href="/ajuda">
-          <S.NavLink type="button">Ajuda</S.NavLink>
-        </Link>
+        <S.NavLink href="/quem-somos">Quem Somos</S.NavLink>
+        <S.NavLink href="/ajuda">Ajuda</S.NavLink>
       </S.NavContainer>
     </S.HeaderContainer>
   );

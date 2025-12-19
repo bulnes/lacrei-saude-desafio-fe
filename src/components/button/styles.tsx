@@ -1,8 +1,8 @@
 "use client";
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Button = styled.button`
+export const ButtonStyle = css`
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -30,4 +30,8 @@ export const Button = styled.button`
     background-color: rgb(0, 119, 86);
     border: 2px solid rgb(0, 119, 86);
   }
+`;
+
+export const Button = styled.button`
+  ${ButtonStyle}
 `;

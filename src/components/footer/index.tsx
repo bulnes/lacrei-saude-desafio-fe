@@ -7,25 +7,43 @@ const content = [
   {
     title: "Lacrei Saúde",
     links: [
-      { label: "Sobre Nós", href: "#" },
-      { label: "Nosso Propósito", href: "#" },
-      { label: "Missão, Visão e Valor", href: "#" },
-      { label: "Acessibilidade", href: "#" },
+      { label: "Sobre Nós", href: "/quem-somos" },
+      { label: "Nosso Propósito", href: "/quem-somos" },
+      { label: "Missão, Visão e Valor", href: "/quem-somos" },
+      {
+        label: "Acessibilidade",
+        href: "https://lacreisaude.com.br/acessibilidade/",
+      },
     ],
   },
   {
     title: "Saúde",
     links: [
-      { label: "Buscar atendimento", href: "#" },
-      { label: "Oferecer atendimento", href: "#" },
+      {
+        label: "Buscar atendimento",
+        href: "https://paciente.lacreisaude.com.br/",
+      },
+      {
+        label: "Oferecer atendimento",
+        href: "https://profissional.lacreisaude.com.br/",
+      },
     ],
   },
   {
     title: "Segurança e Privacidade",
     links: [
-      { label: "Política de Privacidade", href: "#" },
-      { label: "Termos de Serviço", href: "#" },
-      { label: "Direitos de Titular", href: "#" },
+      {
+        label: "Política de Privacidade",
+        href: "https://lacreisaude.com.br/politica-de-privacidade/",
+      },
+      {
+        label: "Termos de Serviço",
+        href: "https://lacreisaude.com.br/termos-de-uso/",
+      },
+      {
+        label: "Direitos de Titular",
+        href: "https://lacreisaude.com.br/direitos-de-titular/",
+      },
     ],
   },
 ];
@@ -51,11 +69,20 @@ export function Footer() {
             <S.ContentTitle>{section.title}</S.ContentTitle>
 
             <nav>
-              {section.links.map((link) => (
-                <Link key={link.label} href={link.href}>
-                  {link.label}
-                </Link>
-              ))}
+              {section.links.map((link) => {
+                const extraAttributes = link.href.startsWith("http")
+                  ? {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    }
+                  : {};
+
+                return (
+                  <Link key={link.label} href={link.href} {...extraAttributes}>
+                    {link.label}
+                  </Link>
+                );
+              })}
             </nav>
           </S.ContentSection>
         ))}

@@ -1,46 +1,61 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import * as S from "./styles";
 
-const questionsAndAnswers = [
-  {
-    question: "Como faço para me cadastrar na Lacrei Saúde?",
-    answer:
-      "Para se cadastrar, basta acessar nosso site e clicar em 'Cadastrar-se'. Preencha o formulário com suas informações pessoais e crie uma senha segura.",
-  },
-  {
-    question: "Quais serviços a Lacrei Saúde oferece?",
-    answer:
-      "Oferecemos uma variedade de serviços de saúde inclusivos para a comunidade LGBTQIAPN+, incluindo consultas médicas, terapias e suporte psicológico.",
-  },
-  {
-    question: "Como posso agendar uma consulta?",
-    answer:
-      "Você pode agendar uma consulta através do nosso site ou aplicativo móvel. Basta selecionar o profissional desejado, escolher uma data e horário disponíveis, e confirmar o agendamento.",
-  },
-  {
-    question:
-      "Quais medidas de segurança a Lacrei Saúde adota para proteger meus dados?",
-    answer:
-      "Utilizamos tecnologias avançadas de criptografia e seguimos rigorosos protocolos de segurança para garantir que seus dados pessoais e médicos estejam sempre protegidos.",
-  },
-  {
-    question: "Como posso entrar em contato com o suporte da Lacrei Saúde?",
-    answer:
-      "Você pode entrar em contato com nosso suporte através do chat ao vivo no site, pelo e-mail suporte@lacrei.com.br ou pelo telefone (11) 1234-5678.",
-  },
-];
+interface FAQItem {
+  question: string;
+  answer: string;
+}
 
 export function Help() {
+  const [questionsAndAnswers, setQuestionsAndAnswers] = useState<FAQItem[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    async function fetchFAQ() {
+      try {
+        setLoading(true);
+        const response = await fetch("http://localhost:3001/faq");
+
+        if (!response.ok) throw new Error("Erro ao buscar dados");
+
+        const data = await response.json();
+        setQuestionsAndAnswers(data);
+      } catch (err) {
+        setError(true);
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchFAQ();
+  }, []);
+
   return (
     <S.HelpContainer>
       <div>
         <S.Title>Dúvidas</S.Title>
 
-        {questionsAndAnswers.map((item) => (
-          <S.Paragraph key={item.question}>
-            <strong>{item.question}</strong>
-            {item.answer}
+        {loading && <S.Paragraph>Carregando perguntas...</S.Paragraph>}
+
+        {error && !loading && (
+          <S.Paragraph>
+            Ops! Não conseguimos carregar as dúvidas agora. Tente novamente mais
+            tarde.
           </S.Paragraph>
-        ))}
+        )}
+
+        {!loading &&
+          !error &&
+          questionsAndAnswers.map((item, index) => (
+            <S.Paragraph key={index}>
+              <strong>{item.question}</strong>
+              {item.answer}
+            </S.Paragraph>
+          ))}
       </div>
     </S.HelpContainer>
   );

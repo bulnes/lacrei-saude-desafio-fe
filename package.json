@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently -p \"[{name}]\" -n \"Website,FakeAPI\" -c \"bgBlue.bold,bgMagenta.bold\" \"next dev\" \"npm run fake:api\"",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "fake:api": "json-server --port 3001 ./src/mock/db.json"
   },
   "dependencies": {
     "next": "16.0.10",
@@ -25,10 +26,12 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
+    "json-server": "^1.0.0-beta.3",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   }

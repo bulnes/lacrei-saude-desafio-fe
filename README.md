@@ -34,7 +34,7 @@ npm run dev
 - Website: [http://localhost:3000](http://localhost:3000)
 - Fake API: [http://localhost:3001](http://localhost:3001)
 
-## 🛠 Justificativas Técnicas
+## Justificativas Técnicas
 
 **Next.js (App Router)**: Escolhido pela eficiência no roteamento e otimização nativa de performance (como o componente Image e Link).
 
@@ -46,7 +46,7 @@ npm run dev
 
 **Jest & React Testing Library**: A suíte de testes foca na experiência do usuário (acessibilidade), garantindo que os componentes sejam funcionais e acessíveis por leitores de tela (usando roles e ARIA labels).
 
-## 🏗 Deploy
+## Deploy
 
 O deploy da aplicação foi configurado para a Vercel.
 
@@ -64,7 +64,7 @@ npm start
 
 Nota: Para o funcionamento da Fake API em produção, os dados do db.json devem ser migrados para uma API real.
 
-## 🔄 Estratégia de Rollback
+## Estratégia de Rollback
 
 Caso uma nova versão apresente falhas críticas em produção, os seguintes passos devem ser seguidos:
 
@@ -90,7 +90,7 @@ git revert HEAD
 git push origin main
 ```
 
-## 🧪 Testes e Cobertura
+## Testes e Cobertura
 
 Para garantir a qualidade e evitar regressões:
 
@@ -100,7 +100,7 @@ Para garantir a qualidade e evitar regressões:
 
 Os testes focam na experiência do usuário, verificando a acessibilidade e funcionalidade dos componentes.
 
-## 📦 Scripts Disponíveis
+## Scripts Disponíveis
 
 - `dev`: Inicia o ambiente de desenvolvimento completo.
 - `build`: Prepara a aplicação para produção.

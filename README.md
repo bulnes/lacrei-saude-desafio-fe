@@ -94,9 +94,23 @@ git push origin main
 
 Para garantir a qualidade e evitar regressões:
 
-- Executar testes: `npm run test`
-- Modo Watch: `npm run test:watch`
-- Relatório de Coverage: `npm run test:coverage`
+Executar testes:
+
+```bash
+npm run test
+```
+
+Modo Watch:
+
+```bash
+npm run test:watch
+```
+
+Relatório de Coverage:
+
+```bash
+npm run test:coverage
+```
 
 Os testes focam na experiência do usuário, verificando a acessibilidade e funcionalidade dos componentes.
 
@@ -108,7 +122,7 @@ Os testes focam na experiência do usuário, verificando a acessibilidade e func
 - `test:coverage`: Gera relatório detalhado de testes.
 - `fake:api`: Inicia apenas o servidor mock na porta 3001.
 
-## PageSpeed Insights
+## PageSpeed Insights by Google
 
 O projeto foi otimizado para alcançar uma pontuação alta no PageSpeed Insights, focando em:
 
@@ -127,6 +141,18 @@ Para a versão desktop, a pontuação alcançada foi de 100/100 em todos os crit
 ![PageSpeed Insights Desktop](./public/readme/pagespeed-desktop.png)
 
 Para mais detalhes, consulte o [relatório completo no Google PageSpeed Insights](https://pagespeed.web.dev/analysis/https-lacrei-saude-desafio-fe-vercel-app/rxyvr70v23?form_factor=mobile).
+
+## Acessibilidade
+
+O projeto segue as melhores práticas de acessibilidade, incluindo:
+
+- HTML semântico
+- Uso de ARIA labels
+- Testes com foco em leitores de tela
+- Contraste adequado de cores
+- Navegação via teclado
+
+É fundamental garantir que a plataforma seja utilizável por todos, independentemente de suas habilidades.
 
 ---
 

@@ -114,6 +114,12 @@ npm run test:coverage
 
 Os testes focam na experiência do usuário, verificando a acessibilidade e funcionalidade dos componentes.
 
+Todos os componentes foram testados com uma cobertura de 95%.
+
+Ao executar `npm run test:coverage`, o relatório detalhado estará disponível em `./coverage/lcov-report/index.html`, podendo ser aberto em qualquer navegador. A imagem abaixo ilustra a cobertura geral do projeto:
+
+![Coverage Report](./public/readme/test-coverage.png)
+
 ## Scripts Disponíveis
 
 - `dev`: Inicia o ambiente de desenvolvimento completo.

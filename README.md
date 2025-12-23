@@ -120,11 +120,11 @@ O projeto foi otimizado para alcançar uma pontuação alta no PageSpeed Insight
 
 Para a versão mobile, a pontuação alcançada foi de 97/100 em Performance e 100/100 nos demais critérios.
 
-![PageSpeed Insights Mobile](./public/pagespeed-mobile.png)
+![PageSpeed Insights Mobile](./public/readme/pagespeed-mobile.png)
 
 Para a versão desktop, a pontuação alcançada foi de 100/100 em todos os critérios.
 
-![PageSpeed Insights Desktop](./public/pagespeed-desktop.png)
+![PageSpeed Insights Desktop](./public/readme/pagespeed-desktop.png)
 
 Para mais detalhes, consulte o [relatório completo no Google PageSpeed Insights](https://pagespeed.web.dev/analysis/https-lacrei-saude-desafio-fe-vercel-app/rxyvr70v23?form_factor=mobile).
 

@@ -108,6 +108,26 @@ Os testes focam na experiência do usuário, verificando a acessibilidade e func
 - `test:coverage`: Gera relatório detalhado de testes.
 - `fake:api`: Inicia apenas o servidor mock na porta 3001.
 
+## PageSpeed Insights
+
+O projeto foi otimizado para alcançar uma pontuação alta no PageSpeed Insights, focando em:
+
+- Performance
+- Acessibilidade
+- Boas práticas
+- SEO
+- Experiência com dispositivos móveis
+
+Para a versão mobile, a pontuação alcançada foi de 97/100 em Performance e 100/100 nos demais critérios.
+
+![PageSpeed Insights Mobile](./public/pagespeed-mobile.png)
+
+Para a versão desktop, a pontuação alcançada foi de 100/100 em todos os critérios.
+
+![PageSpeed Insights Desktop](./public/pagespeed-desktop.png)
+
+Para mais detalhes, consulte o [relatório completo no Google PageSpeed Insights](https://pagespeed.web.dev/analysis/https-lacrei-saude-desafio-fe-vercel-app/rxyvr70v23?form_factor=mobile).
+
 ---
 
 Este README foi desenvolvido para demonstrar clareza técnica e transparência nos processos de engenharia. 🏳️‍🌈
